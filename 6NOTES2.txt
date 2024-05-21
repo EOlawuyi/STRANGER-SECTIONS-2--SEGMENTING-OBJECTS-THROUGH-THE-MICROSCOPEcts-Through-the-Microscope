@@ -1,0 +1,278 @@
+COLOR/IMAGE SHARPENING FOR ALL IMAGES PRIOR TO DETECTION
+COLOR SEGMENTATION FOR DARK DARK BROWN RECIONS SPECIFICALLY IN IMAGES 13-25
+
+NO NEED FOR WORKING- IMAGES 1-6 (A,B,C,D,E)
+COULD BE RE-WORKED  - IMAGES 7 AND 8 (G)
+NO NEED FOR WORKING- IMAGES 9-10 (H)
+CHECK ON COLOR SEGMENTATION FOR 11 (I)
+COULD BE REWORKED (13 AND 14)  (J)
+COULD BE REWORKED (15 AND 16)  (K)
+COULD BE REWORKED (17 AND 18)  (L)
+COULD BE REWORKED (19 AND 20)  (M)
+COULD BE REWORKED (21 AND 22)  (N)
+
+hhh
+P - ONWARD6P - ONWARD6D CODE
+Q - ONWARD6Q - ONWARD6E CODE - SCORE - 0.0865 -TURNED THE LAYOUT 2 IN THE RIGHT DIRECTION
+
+1. MAY 10, 2024 - esthero611-wisetag@ieee.org_ONWARDS 
+- ONWARDDCODE6G - SCORE 0.1005. 1ST IMAGE UPDATED (GRAY COLOR)
+- RAN 25 TEST IMAGES
+- ADJUSTED THE GRAY COLOR THRESHOLD BY EXPANDING 3 POINTS BOTH WAYS TO OBTAIN THIS RESULT
+
+2. MAY 11, 2024 - esthero611-wisetag@ieee.org_ONWARDT
+- ONWARDDCODE6G - SCORE 0.1532 2ND IMAGE UPDATED (DARK GRAY COLOR INSERTION)
+- RAN 25 TEST IMAGES
+- ADDED THE NEW DARK GRAY COLOR THRESHOLDING (26 POINTS EACH WAY) 
+
+3. MAY 12, 2024 - esthero611-wisetag@ieee.org_ONWARDU
+- ONWARDDCODE6G - SCORE 0.1531 4TH IMAGE UPDATED (NO NEED TO UPDATE 3RD IMAGE) 
+- RAN 25 TEST IMAGES
+- ADDED THE NEW LIGHT GRAY COLOR THRESHOLDING (9 POINTS EACH WAY) 
+
+
+4. MAY 12, 2024 - esthero611-wisetag@ieee.org_ONWARDV
+- ONWARDDCODE6H - SCORE - 0.1633 7TH IMAGE UPDATED (NO NEED TO UPDATE 5 AND 6 IMAGE) 
+- RAN 25 TEST IMAGES
+- ADDED THE NEW LIGHT GRAY COLOR THRESHOLDING 2 (6 POINTS EACH WAY) 
+- ADDED THE NEW LIGHT GRAY COLOR THRESHOLDING 3 (30 POINTS EACH WAY) 
+
+5. MAY 12, 2024 - esthero611-wisetag@ieee.org_ONWARDW
+- ONWARDDCODE6I - SCORE - 0.1633 7TH IMAGE UPDATED (NO NEED TO UPDATE 5 AND 6 IMAGE) 
+- RAN 25 TEST IMAGES
+- ADDED COLOR THRESHOLDING SELECTION FOR ORANGE, YELLOW, BROWN, GRAY,
+  DARK GRAY, LIGHT GRAY, LIGHT GRAY 2, LIGHT GRAY 3) 
+- RESULT FOR NO COLOR THRESHOLD SELECTED
+
+
+6. MAY 12, 2024 - esthero611-wisetag@ieee.org_ONWARDX
+- ONWARDDCODE6I - SCORE - 0.1633 7TH IMAGE UPDATED (NO NEED TO UPDATE 5 AND 6 IMAGE) 
+- RAN 25 TEST IMAGES
+- ADDED COLOR THRESHOLDING SELECTION FOR ORANGE, YELLOW, BROWN, GRAY,
+  DARK GRAY, LIGHT GRAY, LIGHT GRAY 2, LIGHT GRAY 3) 
+- RESULT FOR COLOR THRESHOLD SELECTED
+
+7. MAY 13, 2024 - esthero611-wisetag@ieee.org_ONWARDY
+- ONWARDDCODE6J - SCORE - 0 10TH IMAGE UPDATED (NO NEED TO UPDATE 8 AND 9 IMAGE) 
+- RAN 25 TEST IMAGES (SCORE ZERO - STORED DETECTION VALUE OUTPUT AS 255 INSTEAD OF 2
+- ADDED COLOR THRESHOLDING SELECTION FOR ORANGE, YELLOW, BROWN, GRAY,
+  DARK GRAY, LIGHT GRAY, LIGHT GRAY 2, LIGHT GRAY 3) 
+- UPDATED DETECTED IMAGE SO IMAGE REGIONS DETECTED IS ACROSS THE ENTIRE IMAGE
+
+8. MAY 14, 2024 - esthero611-wisetag@ieee.org_ONWARDY & Z
+- ONWARDDCODE6J - SCORE - 0.1238 & 0.1239 10TH IMAGE UPDATED (NO NEED TO UPDATE 8 AND 9 IMAGE) 
+- RAN 25 TEST IMAGES
+- ADDED COLOR THRESHOLDING SELECTION FOR ORANGE, YELLOW, BROWN, GRAY,
+  DARK GRAY, LIGHT GRAY, LIGHT GRAY 2, LIGHT GRAY 3) 
+- UPDATED DETECTED IMAGE SO IMAGE REGIONS DETECTED IS ACROSS THE ENTIRE IMAGE
+- RESULT FOR NO COLOR THRESHOLD SELECTED - 0.1238
+- RESULT FOR COLOR THRESHOLD SELECTED - 0.1239
+
+9. MAY 15, 2024 - esthero611-wisetag@ieee.org_ONWARD601 and 602
+- ONWARDDCODE6L - SCORE -0.118 and 0.1252 
+- RAN 25 TEST IMAGES
+- REMOVED 10TH IMAGE UPDATE(- LIGHT GRAY 2) 
+- UPDATED ORANGE COLOR THRESHOLDING - - [167  84  14]
+- UPDATED DETECTED IMAGE SO IMAGE REGIONS DETECTED IS ACROSS THE ENTIRE IMAGE
+- CHANGED IMAGE VIEWING - VIEW ARRAYS AS PLT.SHOW INSTEAD OF IM.FROM ARRAY TO
+  PRESERVE IMAGE ORIENTATION AS 1024 BY 1360 
+  plt.imshow(gray_arr2, cmap='gray')
+  plt.show() 
+
+
+10. MAY 16, 2024 - esthero611-wisetag@ieee.org_ONWARD603 and 04
+- ONWARDDCODE6M - SCORE -0.118 and 0.1252  
+- RAN 25 TEST IMAGES
+- REMOVED 10TH IMAGE UPDATE(- LIGHT GRAY 2) 
+- UPDATED YELLOW COLOR THRESHOLDING TO SELECT ORANGE PIXELS ONLY - [167  84  14]
+- UPDATED CODE TO SHOW THE COLOR SEGMENTATION CHOSEN FOR EACH IMAGE
+- UPDATED DETECTED IMAGE SO IMAGE REGIONS DETECTED IS ACROSS THE ENTIRE IMAGE
+- CHANGED IMAGE VIEWING - VIEW ARRAYS AS PLT.SHOW INSTEAD OF IM.FROM ARRAY TO
+  PRESERVE IMAGE ORIENTATION AS 1024 BY 1360 
+  plt.imshow(gray_arr2, cmap='gray')
+  plt.show() 
+  print(ImageColor)
+  ['Gray', 'Dark Gray', 'Gray', 'Dark Gray', 'Gray', 'Dark Gray', 'Dark Gray', 
+   'Dark Gray', 'Dark Gray', 'Dark Gray', 'Dark Gray', 'Dark Gray', 'Orange', 
+   'Dark Gray', 'Orange', 'Orange', 'Orange', 'Orange', 'Orange', 'Orange', '
+    Orange', 'Orange', 'Orange', 'Orange', 'Orange']
+
+
+
+
+11. MAY 17, 2024 - esthero611-wisetag@ieee.org_ONWARD605 and 06
+- ONWARDDCODE6N - 0.1083 AND 0.1221 SCORE 
+- RAN 25 TEST IMAGES
+- REMOVED 10TH IMAGE UPDATE(- LIGHT GRAY 2) 
+- REMOVED THE FOLLOWING COLOR THRESHOLDING - BROWN, LIGHT GRAY, LIGHT GRAY 3,  
+  AND YELLOW, AS THESE DO NOT SHOW UP IN THE 25 IMAGES (SEE 10 ABOVE)
+- UPDATED DETECTED IMAGE SO IMAGE REGIONS DETECTED IS ACROSS THE ENTIRE IMAGE
+- CHANGED IMAGE VIEWING - VIEW ARRAYS AS PLT.SHOW INSTEAD OF IM.FROM ARRAY TO
+  PRESERVE IMAGE ORIENTATION AS 1024 BY 1360 
+  plt.imshow(gray_arr2, cmap='gray')
+  plt.show() 
+  print(ImageColor)
+  ['Gray', 'Dark Gray', 'Gray', 'Dark Gray', 'Gray', 'Dark Gray', 'Dark Gray',
+  'Dark Gray', 'Dark Gray', 'Dark Gray', 'Dark Gray', 'Dark Gray', 'Orange', 
+  'Dark Gray', 'Orange', 'Orange', 'Orange', 'Orange', 'Orange', 'Orange', 
+  'Orange', 'Orange', 'Orange', 'Orange', 'Orange']
+
+
+
+
+12. MAY 17, 2024 - esthero611-wisetag@ieee.org_ONWARD607 and 08
+- ONWARDDCODE60 - TOOK CODE FROM NO.6 ABOVE  - SCORE - 0.1751 AND 0.1588
+- ADJUSTED ORANGE COLOR THRESHOLDING
+- COLOR THRESHOLDING ONLY FOR GRAY, DARK GRAY AND ORANGE
+  plt.imshow(gray_arr2, cmap='gray')
+  plt.show() 
+  print(ImageColor)
+  ['Gray', 'Dark Gray', 'Gray', 'Dark Gray', 'Gray', 'Dark Gray', 'Dark Gray',
+  'Dark Gray', 'Dark Gray', 'Dark Gray', 'Dark Gray', 'Dark Gray', 'Orange', 
+  'Dark Gray', 'Orange', 'Orange', 'Orange', 'Orange', 'Orange', 'Orange', 
+  'Orange', 'Orange', 'Orange', 'Orange', 'Orange']
+
+
+(NEXT) - LOOK INTO DARK GRAY AND GRAY COLOR THRESHOLDING
+       - NOTE CURRENT DARK GRAY SELECTION HAS REGIONS OF BROWN IN IT - REMOVE!!!!
+
+
+
+13. MAY 18, 2024 - esthero611-wisetag@ieee.org_ONWARD609 and 10
+- ONWARDDCODE6P - TOOK CODE FROM NO.12 ABOVE  - SCORE - 0.1022 AND 0.1022
+- ADJUSTED ORANGE COLOR THRESHOLDING
+- COLOR THRESHOLDING ONLY FOR GRAY AND ORANGE
+- REMOVED BROWN REGION FROM GRAY COLOR THRESHOLDING
+  plt.imshow(gray_arr2, cmap='gray')
+  plt.show() 
+  print(ImageColor)
+  ['Gray', 'Dark Gray', 'Gray', 'Dark Gray', 'Gray', 'Dark Gray', 'Dark Gray',
+  'Dark Gray', 'Dark Gray', 'Dark Gray', 'Dark Gray', 'Dark Gray', 'Orange', 
+  'Dark Gray', 'Orange', 'Orange', 'Orange', 'Orange', 'Orange', 'Orange', 
+  'Orange', 'Orange', 'Orange', 'Orange', 'Orange']
+
+
+
+
+14. MAY 18, 2024 - esthero611-wisetag@ieee.org_ONWARD609 and 10
+- ONWARDDCODE6P - TOOK CODE FROM NO.12 ABOVE  - SCORE - 0.1022 AND 0.1022
+- ADJUSTED ORANGE COLOR THRESHOLDING
+- COLOR THRESHOLDING ONLY FOR GRAY AND ORANGE
+- REMOVED BROWN REGION FROM GRAY COLOR THRESHOLDING
+  plt.imshow(gray_arr2, cmap='gray')
+  plt.show() 
+  print(ImageColor)
+  ['Gray', 'Dark Gray', 'Gray', 'Dark Gray', 'Gray', 'Dark Gray', 'Dark Gray',
+  'Dark Gray', 'Dark Gray', 'Dark Gray', 'Dark Gray', 'Dark Gray', 'Orange', 
+  'Dark Gray', 'Orange', 'Orange', 'Orange', 'Orange', 'Orange', 'Orange', 
+  'Orange', 'Orange', 'Orange', 'Orange', 'Orange']
+
+
+(NEXT) - LOOK INTO DARK GRAY COLOR THRESHOLDING
+       - NOTE CURRENT DARK GRAY SELECTION HAS REGIONS OF BROWN IN IT - REMOVE!!!!
+
+
+15. MAY 19, 2024 - esthero611-wisetag@ieee.org_ONWARD611 and 12
+- ONWARDDCODE6Q - TOOK CODE FROM NO.12 ABOVE  - SCORE - 0.1237 AND 0.1237
+- ADJUSTED DARK COLOR THRESHOLDING
+- COLOR THRESHOLDING ONLY FOR GRAY, DARK GRAY AND ORANGE
+- REMOVED BROWN REGION FROM DARK GRAY COLOR THRESHOLDING
+
+
+15. MAY 21, 2024 - esthero611-wisetag@ieee.org_ONWARD613 and 14
+- ONWARDDCODE6R - TOOK CODE FROM NO.14 ABOVE  - SCORE - 0.1174 nd 0.1174
+- INSERTED HOMOGENEOUS THRESHOLDING FOR GRAY SCALE (3 X 3 MATRIX, THRESHOLD > 3)
+ 
+         MAY 21, 2024
+       - PRE-PROCESSING - CONVERT TO GRAY SCALE, DO HOMOGENEITY CODE AND EXTRACT 
+         THOSE HOMOGENOUS PIXELS ONLY FOR SUBSEQUENT COLOR THRESHOLDING 
+         (GRAY, DARK GRAY, AND ORANGE) - 3 X 3, 5 X 5, AND 7 BY 7
+
+
+16. MAY 21, 2024 - esthero611-wisetag@ieee.org_ONWARD615 and 16
+- ONWARDDCODE6S - TOOK CODE FROM NO.15 ABOVE - SCORE -
+- REMOVED HOMOGENEOUS THRESHOLDING FOR GRAY SCALE (3 X 3 MATRIX, THRESHOLD > 3)
+- INSERTED HOMOGENEOUS THRESHOLDING FOR GRAY SCALE (5 X 5 MATRIX, THRESHOLD > 4) 
+
+         MAY 22, 2024
+       - PRE-PROCESSING - CONVERT TO GRAY SCALE, DO HOMOGENEITY CODE AND EXTRACT 
+         THOSE HOMOGENOUS PIXELS ONLY FOR SUBSEQUENT COLOR THRESHOLDING 
+         (GRAY, DARK GRAY, AND ORANGE) -  7 BY 7
+
+
+(NEXT) - LOOK AT 25 IMAGES FOR NEXT STEP
+       - POSSIBLE NEXT STEP - AREA THRESHOLDING FOR DARK GRAY ONLY
+       - PRE-PROCESSING - CONVERT TO GRAY SCALE, DO HOMOGENEITY CODE AND EXTRACT 
+         THOSE HOMOGENOUS PIXELS ONLY FOR SUBSEQUENT COLOR THRESHOLDING 
+         (GRAY, DARK GRAY, AND ORANGE) - 3 X 3, 5 X 5, AND 7 BY 7
+       - PRE-PROCESSING - ERADICATE COLOR YELLOW PIXELS BEFORE PROCESSING
+       - PRE-PROCESSING - DO COLOR HOMOGENEITY CODE AND EXTRACT 
+         THOSE HOMOGENOUS PIXELS ONLY FOR SUBSEQUENT COLOR THRESHOLDING 
+         (GRAY, DARK GRAY, AND ORANGE) - 3 X 3, 5 X 5, AND 7 BY 7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+COLOR IMAGE SHARPENING IN PYTHON
+kernel = np.array([[0, -1, 0],
+[-1, 5, -1],
+[0, -1, 0]])
+sharpened = cv2.filter2D(image, -1, kernel)
+
+In the above code, we define a sharpening kernel (a 3×3 matrix) with values that emphasize edges. The filter2D function applies this kernel to the image to perform the sharpening operation.
+
+cv2.imshow(‘Original Image’, image)
+cv2.imshow(‘Sharpened Image’, sharpened)
+cv2.waitKey(0) cv2.destroyAllWindows()
+
+This code displays both the original and sharpened images using OpenCV’s imshow function. waitKey(0) waits for a keyboard event, and destroyAllWindows closes the image windows when a key is pressed
+
+
+TRAININGS $50,000
+WORKSHOPS - $50,000
+COLLABORATION WITH GOOGLE EARTH - $50,000
+PERSONNEL SALARIES AND ALLOWANCES
+O. PROJECT MANAGER - EFEJERA EJOFODOMI - $200,000
+1. DR. JASON ZARA - $150,000
+2. DR. VESNA ZDERIC - $100,000
+3. DEBORAH OLAWUYI - $70,000
+4. JOSEPH OLAWUYI - $70,000
+5. ENGINEER OMAFUME EJOFODOMI - $60,000
+6. DR. MICHAEL OLAWUYI - $400,000
+
+The Automated Irrigation System automates irrigation across farmlands of any size in order to optimize crop productivity. The Automated Irrigation System software enables Rural and Commercial Farmers to know and visualize the cost and layout of a customized irrigation system prior to purchase, and to see the expected increase in harvest  quantity and profit from utilizing the irrigation system.
+
+RURAL AND COMMERCIAL FARMERS REQUIRING IRRIGATION TO IMPROVE CROP PRODUCTIVITY
+
+TO BOOST, INCREASE AND OPTIMIZE THE FOOD PRODUCTIVITY OF RURAL AND COMMERCIAL FARMERS USING CUSTOMIZED AUTOMATED IRRIGATION
+
+WE ARE CURRENTLY COLLABORATING WITH OXFAM AND HARVARD UNIVERSITY TO PROPAGATE AND MARKET THE AUTOMATED IRRIGATION SYSTEM (AIS) AND SOFTWARE ACROSS 85 COUNTRIES.
+
+
+IRRIGATION, AUTOMATED IRRIGATION, IRRIGATION SOFTWARE
+
+
+Monitoring units are made up of soil temperature and humidity sensors, soil moisture sensors, Control Boards, Wireless Modules and Battery Packs enclosed in weather-resistant sealed cases. The Monitoring Units continuously measure temperature, humidity, and soil moisture content in the land. If the moisture content drops below a predetermined threshold for the particular crop under production in the land, the Monitoring Units send wireless messages to the Control Units using the Wireless modules. Control Units are made up of Control Boards, Wireless Modules, Battery Packs, and Relay Switches. The Control Units are electrically connected to the valves in the irrigation pipelines. Once the Control Units receive wireless messages from the Monitoring Units requesting irrigation to commence, they electronically activate the pipeline valves along the water flow channel, causing them to open so that irrigation from the water source commences.
+When the moisture content rises above a predetermined threshold for the crop, the Monitoring Units send wireless messages to the Control Units requesting irrigation to cease. The Control Units then electronically alter the power supply to the pipeline valves, causing them to close and cease automatic irrigation. This automated irrigation system is customizable and can also be used to upgrade existing drip irrigation systems, surface irrigation systems, and sprinkler irrigation systems to overcome their existing limitations. The unique advantage of this system is that it enables farmers effectively perform multi-cropping on a single plot of land, as each crop is automatically provided the required amount of irrigation water for its optimum development. This is accomplished with the utilization of individual monitoring units embedded within each irrigation block.
+The Automated Irrigation System (AIS) Software enables farmers and commercial organizations plan for the installation of irrigation systems on their lands, and helps to promote the need for Irrigation in the Agriculture Industry.
+The System and Software has been evaluated by Harvard University and Oxfam, and is set to be marketed across 85 countries.

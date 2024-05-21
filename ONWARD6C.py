@@ -1,11 +1,13 @@
 from PIL import Image as im
-from PIL import Image, ImageTk
+from PIL import Image
+from PIL import ImageTk
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
 import sys
 import numpy as np
-import imageio.v3 as iio
+import imageio
+#import imageio.v3 as iio
 import ipympl
 import matplotlib.pyplot as plt
 import skimage as ski
@@ -73,7 +75,17 @@ mainwindow.geometry("1400x700")
 
             
 #Load 362 Images
-Imagefile = ["vlridu.jpg", "2otd5q.jpg", "4uhzc7.jpg", "4ywofb.jpg", "cgjz2a.jpg", "gp0mak.jpg", "jbpvyh.jpg", "n7ozhj.jpg", "ont2xr.jpg", "oqr1h3.jpg", "v0t9rk.jpg", "v7dlpt.jpg", "vktqud.jpg", "vlridu.jpg", "vyo284.jpg", "w7v4b5.jpg", "whvcmt.jpg", "widroh.jpg", "wocbyu.jpg", "x4vowt.jpg", "xokfeh.jpg", "y0hsj8.jpg", "y3b47k.jpg", "yir071.jpg", "zyvdo0.jpg" ]
+Imagefile = ["2fpvuk.jpg", "2otd5q.jpg", "4uhzc7.jpg",
+              "4ywofb.jpg", "cgjz2a.jpg", "gp0mak.jpg",
+              "jbpvyh.jpg", "n7ozhj.jpg", "ont2xr.jpg",
+              "oqr1h3.jpg", "v0t9rk.jpg", "v7dlpt.jpg",
+              "vktqud.jpg", "vlridu.jpg", "vyo284.jpg",
+              "w7v4b5.jpg", "whvcmt.jpg", "widroh.jpg",
+              "wocbyu.jpg", "x4vowt.jpg", "xokfeh.jpg",
+              "y0hsj8.jpg", "y3b47k.jpg", "yir071.jpg",
+              "zyvdo0.jpg"
+             ]
+
          
 #Imagefile2 = ["2fpvuk_pred.npy", "2otd5q_pred.npy", "4uhzc7_pred.npy",
 #              "4ywofb_pred.npy", "cgjz2a_pred.npy", "gp0mak_pred.npy",
@@ -97,49 +109,126 @@ Imagefile3 = ["2fpvuk_pred.npy", "2otd5q_pred.npy", "4uhzc7_pred.npy",
               "zyvdo0_pred.npy"
              ]
               
-for z in range(0,25):
+for z in range(0,1):
    #Read in Image
-   datab = cv2.imread(Imagefile[z])
-   datac = cv2.imread(Imagefile[z])
-   datad = cv2.imread(Imagefile[z])
-   datae = cv2.imread(Imagefile[z])
-   dataf = cv2.imread(Imagefile[z])
-   datag = cv2.imread(Imagefile[z])
-   datah = cv2.imread(Imagefile[z])
-   datai = cv2.imread(Imagefile[z])
-   dataj = cv2.imread(Imagefile[z])
-   datak = cv2.imread(Imagefile[z])
-   datal = cv2.imread(Imagefile[z])
-   datam = cv2.imread(Imagefile[z])
-   datan = cv2.imread(Imagefile[z])
-   datao = cv2.imread(Imagefile[z])
-   datap = cv2.imread(Imagefile[z])
-   dataq = cv2.imread(Imagefile[z])
-   datar = cv2.imread(Imagefile[z])
-   datas = cv2.imread(Imagefile[z])
-   datat = cv2.imread(Imagefile[z])
-   datau = cv2.imread(Imagefile[z])
-   datav = cv2.imread(Imagefile[z])
-   dataw = cv2.imread(Imagefile[z])
-   datax = cv2.imread(Imagefile[z])
-   datay = cv2.imread(Imagefile[z])
-   dataz = cv2.imread(Imagefile[z])
-   datafff = cv2.imread(Imagefile[z])
+   #datab = cv2.imread("jbpvyh.jpg")
+   #datab = cv2.imread("yir071.jpg", cv2.IMREAD_UNCHANGED)
+   # datab = imageio.v2.imread("w7v4b5.jpg")
+   datab = imageio.v2.imread(Imagefile[z])
+   
+   img = im.fromarray(datab, mode=None)
+ #  img = im.fromarray(datab, 'RGB')
+ #  img.show()
+
+   datac = imageio.imread(Imagefile[z])
+   datad = imageio.imread(Imagefile[z])
+   datae = imageio.imread(Imagefile[z])
+   img2 = im.fromarray(datae, mode=None)
+ #  img = im.fromarray(datab, 'RGB')
+   img2.show()
+   
+   dataf = imageio.imread(Imagefile[z])
+   datag = imageio.imread(Imagefile[z])
+   datah = imageio.imread(Imagefile[z])
+   datai = imageio.imread(Imagefile[z])
+   dataj = imageio.imread(Imagefile[z])
+   datak = imageio.imread(Imagefile[z])
+   datal = imageio.imread(Imagefile[z])
+   datam = imageio.imread(Imagefile[z])
+   datan = imageio.imread(Imagefile[z])
+   datao = imageio.imread(Imagefile[z])
+   datap = imageio.imread(Imagefile[z])
+   dataq = imageio.imread(Imagefile[z])
+   datar = imageio.imread(Imagefile[z])
+   datas = imageio.imread(Imagefile[z])
+   datat = imageio.imread(Imagefile[z])
+   datau = imageio.imread(Imagefile[z])
+   datav = imageio.imread(Imagefile[z])
+   dataw = imageio.imread(Imagefile[z])
+   datax = imageio.imread(Imagefile[z])
+   datay = imageio.imread(Imagefile[z])
+   dataz = imageio.imread(Imagefile[z])
+   datafff = imageio.imread(Imagefile[z])
+
+
+
+#   datac = imageio.imread("w7v4b5.jpg")
+#   datad = imageio.imread("w7v4b5.jpg")
+#   datae = imageio.imread("w7v4b5.jpg")
+#   img2 = im.fromarray(datae, mode=None)
+ #  img = im.fromarray(datab, 'RGB')
+#   img2.show()
+   
+#   dataf = imageio.imread("w7v4b5.jpg")
+#   datag = imageio.imread("w7v4b5.jpg")
+#   datah = imageio.imread("w7v4b5.jpg")
+#   datai = imageio.imread("w7v4b5.jpg")
+#   dataj = imageio.imread("w7v4b5.jpg")
+#   datak = imageio.imread("w7v4b5.jpg")
+#   datal = imageio.imread("w7v4b5.jpg")
+#   datam = imageio.imread("w7v4b5.jpg")
+#   datan = imageio.imread("w7v4b5.jpg")
+#   datao = imageio.imread("w7v4b5.jpg")
+#   datap = imageio.imread("w7v4b5.jpg")
+#   dataq = imageio.imread("w7v4b5.jpg")
+#   datar = imageio.imread("w7v4b5.jpg")
+#   datas = imageio.imread("w7v4b5.jpg")
+#   datat = imageio.imread("w7v4b5.jpg")
+#   datau = imageio.imread("w7v4b5.jpg")
+#  datav = imageio.imread("w7v4b5.jpg")
+#  dataw = imageio.imread("w7v4b5.jpg")
+#   datax = imageio.imread("w7v4b5.jpg")
+#  datay = imageio.imread("w7v4b5.jpg")
+#   dataz = imageio.imread("w7v4b5.jpg")
+#  datafff = imageio.imread("w7v4b5.jpg")
+
+
+
+   #datab = cv2.imread(Imagefile[z])
+   #datac = cv2.imread(Imagefile[z])
+   #datad = cv2.imread(Imagefile[z])
+   #datae = cv2.imread(Imagefile[z])
+   #dataf = cv2.imread(Imagefile[z])
+   #datag = cv2.imread(Imagefile[z])
+   #datah = cv2.imread(Imagefile[z])
+   #datai = cv2.imread(Imagefile[z])
+   #dataj = cv2.imread(Imagefile[z])
+   #datak = cv2.imread(Imagefile[z])
+   #datal = cv2.imread(Imagefile[z])
+   #datam = cv2.imread(Imagefile[z])
+   #datan = cv2.imread(Imagefile[z])
+   #datao = cv2.imread(Imagefile[z])
+   #datap = cv2.imread(Imagefile[z])
+   #dataq = cv2.imread(Imagefile[z])
+   #datar = cv2.imread(Imagefile[z])
+   #datas = cv2.imread(Imagefile[z])
+   #datat = cv2.imread(Imagefile[z])
+   #datau = cv2.imread(Imagefile[z])
+   #datav = cv2.imread(Imagefile[z])
+   #dataw = cv2.imread(Imagefile[z])
+   #datax = cv2.imread(Imagefile[z])
+   #datay = cv2.imread(Imagefile[z])
+   #dataz = cv2.imread(Imagefile[z])
+   #datafff = cv2.imread(Imagefile[z])
+
    gray = cv2.cvtColor(datab, cv2.COLOR_BGR2GRAY)
    print(datab)
    print(datab.size)
    print(datab.shape)
    #Display Image
-   img = im.fromarray(datab, 'RGB')
-   img.show()
-   hgghj
+#   img = im.fromarray(datab, 'RGB')
+ #  img.show()
    #print(gray)
-
-#imgtest = datab[340:370,700:750]
-#imgtest2 = im.fromarray(imgtest, 'RGB')
-#imgtest2.show()
+ 
+   imgtest = datab[420:700,700:850]
+   imgtest2 = im.fromarray(imgtest, 'RGB')
+   imgtest2.show()
+   #print("Img Test: ")
+   #print(imgtest[1,1,:])
+   #[118 114 109] [59 44  5]
+   #ddd
 #print(datab[620,640,:]) #[194 200 229]
-#print(imgtest[1,100,:]) [42 248 254]
+#print(imgtest[1,100,:]) [42 248 254][82 83 74]
 #DDEEW
 
 
@@ -147,13 +236,13 @@ for z in range(0,25):
 #print(datab[160,790,:])
 
          
-   for i in range(0,1):
-      data = np.load('2fpvuk_pred.npy',allow_pickle=True)
+#   for i in range(0,1):
+#      data = np.load('2fpvuk_pred.npy',allow_pickle=True)
       #img = im.fromarray(data, 'RGB')
       #print("Test Data")
-      print(data.size)
-      [a,b] = data.shape
-      print(data)
+#      print(data.size)
+#      [a,b] = data.shape
+#      print(data)
 
 
 
@@ -175,21 +264,21 @@ for z in range(0,25):
 
 
    #Overlay label on Image
-   data2 = data
-   count = 0
-   for i in range(0,a):
-      for j in range(0,b):
-         if(data[i,j] != 0):
-            data2[i,j] = 255
-            datac[i,j,:] = 255;
-            count = count + 1
+#   data2 = data
+#   count = 0
+#   for i in range(0,a):
+#      for j in range(0,b):
+#         if(data[i,j] != 0):
+#            data2[i,j] = 255
+#            datac[i,j,:] = 255;
+#            count = count + 1
 
    #Display Labelled Image
-   print("Count: ")
-   print(count)
-   print(data2)
-   img2 = im.fromarray(datac, 'RGB')
-   ###img2.show()
+#   print("Count: ")
+#   print(count)
+#   print(data2)
+#   img2 = im.fromarray(datac, 'RGB')
+#   img2.show()
 
 
 
@@ -198,19 +287,21 @@ for z in range(0,25):
    # (Vitrinite - Medium to Light Gray) & (Inertinite - White)
 
    #Color Thresholding for Liptinite - Dark Brown,
+   #[59 44  5]
    [a1,b1,c1] = datab.shape
    print(a1)
    print(b1)
    print(c1)
    for i in range(0,a1):
       for j in range(0,b1):
-         if((datae[i,j,0] > 60) & (datae[i,j,0] < 255)):
+         if((datae[i,j,0] > 57) & (datae[i,j,0] < 255)):
             if((datae[i,j,1] > 4) & (datae[i,j,1] < 180)):
-               if( ((datae[i,j,2] > 100) & (datae[i,j,2] < 180))):# | ((datab[i,j,2] > 40) & (datab[i,j,2] < 60)) ):
-             #print("Got in")
-                datad[i,j,0] = 255
-                datad[i,j,1] = 0
-                datad[i,j,2] = 0
+               if( ((datae[i,j,2] > 3) & (datae[i,j,2] < 180))):
+                  # | ((datab[i,j,2] > 40) & (datab[i,j,2] < 60)) ):
+                  #print("Got in")
+                  datad[i,j,0] = 255
+                  datad[i,j,1] = 0
+                  datad[i,j,2] = 0
 
    data1 = dataf
    for i in range(0,a1):
@@ -228,11 +319,12 @@ for z in range(0,25):
       for j in range(0,b1):
          if((datae[i,j,0] > 111) & (datae[i,j,0] < 151)):
             if((datae[i,j,1] > 101) & (datae[i,j,1] < 141)):
-               if( ((datae[i,j,2] > 101) & (datae[i,j,2] < 141))):# | ((datab[i,j,2] > 40) & (datab[i,j,2] < 60)) ):
-             #print("Got in")
-                data2[i,j,0] = 255
-                data2[i,j,1] = 0
-                data2[i,j,2] = 0
+               if( ((datae[i,j,2] > 101) & (datae[i,j,2] < 141))):
+                  # | ((datab[i,j,2] > 40) & (datab[i,j,2] < 60)) ):
+                  #print("Got in")
+                  data2[i,j,0] = 255
+                  data2[i,j,1] = 0
+                  data2[i,j,2] = 0
 
 
    data3 = datag
@@ -251,11 +343,12 @@ for z in range(0,25):
       for j in range(0,b1):
          if((datae[i,j,0] > 145) & (datae[i,j,0] < 205)):
             if((datae[i,j,1] > 131) & (datae[i,j,1] < 191)):
-               if( ((datae[i,j,2] > 125) & (datae[i,j,2] < 185))):# | ((datab[i,j,2] > 40) & (datab[i,j,2] < 60)) ):
-             #print("Got in")
-                data4[i,j,0] = 255
-                data4[i,j,1] = 0
-                data4[i,j,2] = 0
+               if( ((datae[i,j,2] > 125) & (datae[i,j,2] < 185))):
+                  # | ((datab[i,j,2] > 40) & (datab[i,j,2] < 60)) ):
+                  #print("Got in")
+                  data4[i,j,0] = 255
+                  data4[i,j,1] = 0
+                  data4[i,j,2] = 0
 
 
    data5 = datah
@@ -271,13 +364,13 @@ for z in range(0,25):
 
               
    img3 = im.fromarray(data1, 'RGB')
-   ###img3.show()
+   img3.show()
 
-   img4 = im.fromarray(data3, 'RGB')
-   ###img4.show()
+  # img4 = im.fromarray(data3, 'RGB')
+  # img4.show()
 
-   img5 = im.fromarray(data5, 'RGB')
-   ###img5.show()
+   #img5 = im.fromarray(data5, 'RGB')
+   #img5.show()
 
 
    #Converge Liptinite Thresholding (Dark Brown) Color Winnowing 1 & 2 into
@@ -285,15 +378,16 @@ for z in range(0,25):
    data6 = datai
    for i in range(0,a1):
       for j in range(0,b1):
-         if(((data3[i,j,0] == 0) & (data3[i,j,1] == 0) & (data3[i,j,2] == 0)) & ((data5[i,j,0] == 0) & (data5[i,j,1] == 0) & (data5[i,j,2] == 0) )):
+         if(((data1[i,j,0] == 0) & (data1[i,j,1] == 0) & (data1[i,j,2] == 0))):
               data6[i,j,0] = 0
               data6[i,j,1] = 0
               data6[i,j,2] = 0
 
 
    img7 = im.fromarray(data6, 'RGB')
-   ###img7.show()
-
+   img7.show()
+   print("test Image:")
+   
 
 
    graytest = cv2.cvtColor(data6, cv2.COLOR_BGR2GRAY)
@@ -303,7 +397,7 @@ for z in range(0,25):
    #perform Region Props on Thresholded Test Image
    lineimagecctest = np.array(graytest)
    #Select Pixels Greater than 100 with a mask
-   masktest = lineimagecctest > 100
+   masktest = lineimagecctest > 10
    labelstest = measure.label(masktest)
 
    #Segment out Regions
@@ -355,8 +449,8 @@ for z in range(0,25):
 
 
    img8 = im.fromarray(np.uint8(graytest3 * 255), 'L')
-   ###img8.show()
-   for m in range(0,linecounttest):
+   #img8.show()
+   for m in range(0,linecounttest+1):
       [size1, size2] = y.values[int(gray1b[m]),1].shape
       print("starting")
       print(size1)
@@ -369,18 +463,17 @@ for z in range(0,25):
 
    #print(y.values[29,1][0,0])
    print("Final Image for Liptinite - Dark Brown:")
-   ###img8.show()
+   img8.show()
 
 
 
    #Transposing to right size. Transpose and then Rotate to see Final Image
-   ###img8.show()
+   img8.show()
    img9 = img8.transpose(1)
-   ###img9.show()
+   img9.show()
    img10 = img9.rotate(-90)
-   ###img10.show()
+   img10.show()
    LiptiniteBrown = img10
-
 
    print("Starting Liptinite Dark Gray Image Processing")
    #Color Thresholding for Liptinite - Dark Gray,
@@ -417,7 +510,7 @@ for z in range(0,25):
 
    print("Final Liptrinite Dark Gray Image 1")           
    img3 = im.fromarray(data1, 'RGB')
-   ###img3.show()
+   img3.show()
 
    graytest = cv2.cvtColor(data1, cv2.COLOR_BGR2GRAY)
    #Grayscale Thresholding to extract lines in Test Image
@@ -426,7 +519,7 @@ for z in range(0,25):
    #perform Region Props on Thresholded Test Image
    lineimagecctest = np.array(graytest)
    #Select Pixels Greater than 100 with a mask
-   masktest = lineimagecctest > 100
+   masktest = lineimagecctest > 10
    labelstest = measure.label(masktest)
 
    #Segment out Regions
@@ -479,8 +572,8 @@ for z in range(0,25):
 
 
    img8 = im.fromarray(np.uint8(graytest3 * 255), 'L')
-   ###img8.show()
-   for m in range(0,linecounttest):
+   img8.show()
+   for m in range(0,linecounttest+1):
       [size1, size2] = y.values[int(gray1b[m]),1].shape
       print("starting")
       print(size1)
@@ -493,16 +586,16 @@ for z in range(0,25):
 
    #print(y.values[29,1][0,0])
    print("Final image 2 for Liptinite Dark Gray Image:")
-   ###img8.show()
+   img8.show()
 
 
 
    #Transposing to right size. Transpose and then Rotate to see Final Image
-   ###img8.show()
+   img8.show()
    img9 = img8.transpose(1)
-   ###img9.show()
+   img9.show()
    img10 = img9.rotate(-90)
-   ###img10.show()
+   img10.show()
    LiptiniteDarkGray = img10
 
 
@@ -514,7 +607,7 @@ for z in range(0,25):
 
    print("Starting Vitrinite Medium to Light Gray Processing")
    #Color Thresholding for Vitrinite - Medium to Light Gray,
-   # Ideal Values: [125 123 135]
+   # Ideal Values: [125 123 135][118 114 109]
    datan = cv2.imread(Imagefile[z])
    [a1,b1,c1] = datab.shape
    print(a1)
@@ -522,9 +615,9 @@ for z in range(0,25):
    print(c1)
    for i in range(0,a1):
       for j in range(0,b1):
-         if((datan[i,j,0] > 124) & (datan[i,j,0] < 126)):
-            if((datan[i,j,1] > 122) & (datan[i,j,1] < 124)):
-               if( ((datan[i,j,2] > 134) & (datan[i,j,2] <136))):# | ((datab[i,j,2] > 40) & (datab[i,j,2] < 60)) ):
+         if((datan[i,j,0] > 115) & (datan[i,j,0] < 126)):
+            if((datan[i,j,1] > 110) & (datan[i,j,1] < 124)):
+               if( ((datan[i,j,2] > 100) & (datan[i,j,2] <136))):# | ((datab[i,j,2] > 40) & (datab[i,j,2] < 60)) ):
              #print("Got in")
                 datad[i,j,0] = 255
                 datad[i,j,1] = 0
@@ -550,249 +643,7 @@ for z in range(0,25):
    #perform Region Props on Thresholded Test Image
    lineimagecctest = np.array(graytest)
    #Select Pixels Greater than 100 with a mask
-   masktest = lineimagecctest > 100
-   labelstest = measure.label(masktest)
-
-   #Segment out Regions
-   regionstest = measure.regionprops(labelstest, lineimagecctest)
-   numlabelstest = len(regionstest)
-   regionstest = regionprops_table(labelstest, properties=('area', 'coords'))
-   #regionstest = regionprops_table(labelstest, properties=('area', 'perimeter'))
-   #print(regions)
-   pd.DataFrame(regionstest)
-   y = pd.DataFrame(regionstest)
-   #Get Shape and Size of Regions
-   [a1,b1] = y.shape
-
-   #Select Only Regions Greater than 500 Pixels and Get their Line Count
-   linecounttest = 0
-   #Array Variable to hold Number of Lines Detected
-   TotalRegions = 0
-   graytest3 = np.zeros((e,d))
-   gray1 = np.zeros((7000,1))
-   gray1b = np.zeros((7000,1))
-   gray2 = np.zeros((7000,2))
-   threshold = np.zeros((d,e))
-
-   one = 0
-   two = 0
-
-   for j in range(0,a1):
-      #print(y.values[j,0])
-      if(y.values[j,0] > 1000):
-         gray1[linecounttest,0] = y.values[j,0]
-         linecounttest = linecounttest + 1
-         gray1b[linecounttest] = j
-         #one = y.values[j,1]),1][j,0]
-         #two = y.values[int(gray1[0,0]),1][j,1]
-         #gray2[linecounttest,0] = one
-         #gray2[linecounttest,1] = two
-
-    
-   print("linecounttest for 2")
-   print(linecounttest)
-   #print("one")
-   #print(gray2[:,0])
-   #print("two:")
-   #print(gray2[:,1])
-
-
-
-   img8 = im.fromarray(np.uint8(graytest3 * 255), 'L')
-   ###img8.show()
-   for m in range(0,linecounttest):
-      [size1, size2] = y.values[int(gray1b[m]),1].shape
-      print("starting")
-      print(size1)
-      print(size2)
-      for p in range(0, size1-1):
-      #img8.putpixel((int(y.values[int(gray1b[j]),1][0,0]),int(y.values[int(gray1b[j]),1][0,1])), 200)
-         img8.putpixel((int(y.values[int(gray1b[m]),1][p,0]),int(y.values[int(gray1b[m]),1][p,1])), 255)
-
-         #print("starting 2")
-
-   #print(y.values[29,1][0,0])
-   print("Final Image for Vitrinite Medium to Light Gray Processing 2:")
-   ###img8.show()
-
-
-
-   #Transposing to right size. Transpose and then Rotate to see Final Image
-   ###img8.show()
-   img9 = img8.transpose(1)
-   ###img9.show()
-   img10 = img9.rotate(-90)
-   ###img10.show()
-   VitriniteMediumtoLightGray = img10
-
-
-
-   #Do the same thing for the other macerels:
-   # Inertinite - White
-   #Next: Inertinite - White 
-   #Color Thresholding for Inertiinite - White
-   # Target Color Range: [194 200 229]
-
-   print("Starting Inertinite White Processing")
-   #Color Thresholding for Inertinite - White
-   # Ideal Values: [194 200 229]
-   datao = cv2.imread(Imagefile[z])
-   [a1,b1,c1] = datab.shape
-   print(a1)
-   print(b1)
-   print(c1)
-   for i in range(0,a1):
-      for j in range(0,b1):
-         if((datao[i,j,0] > 189) & (datao[i,j,0] < 199)):
-            if((datao[i,j,1] > 195) & (datao[i,j,1] < 205)):
-               if( ((datao[i,j,2] > 224) & (datao[i,j,2] <234))):# | ((datab[i,j,2] > 40) & (datab[i,j,2] < 60)) ):
-             #print("Got in")
-                datad[i,j,0] = 255
-                datad[i,j,1] = 0
-                datad[i,j,2] = 0
-
-   data1 = dataf
-   for i in range(0,a1):
-      for j in range(0,b1):
-           if((datad[i,j,0] != 255) & (datad[i,j,1] != 0) & (datad[i,j,2] != 0) ):
-              data1[i,j,0] = 0
-              data1[i,j,1] = 0
-              data1[i,j,2] = 0
-
-
-   print("Final Inertinite White Image 1")           
-   img3 = im.fromarray(data1, 'RGB')
-   ###img3.show()
-
-   graytest = cv2.cvtColor(data1, cv2.COLOR_BGR2GRAY)
-   #Grayscale Thresholding to extract lines in Test Image
-   [d,e] = graytest.shape
-   graytest2 = cv2.cvtColor(data1, cv2.COLOR_BGR2GRAY)
-   #perform Region Props on Thresholded Test Image
-   lineimagecctest = np.array(graytest)
-   #Select Pixels Greater than 100 with a mask
-   masktest = lineimagecctest > 100
-   labelstest = measure.label(masktest)
-
-   #Segment out Regions
-   regionstest = measure.regionprops(labelstest, lineimagecctest)
-   numlabelstest = len(regionstest)
-   regionstest = regionprops_table(labelstest, properties=('area', 'coords'))
-   #regionstest = regionprops_table(labelstest, properties=('area', 'perimeter'))
-   #print(regions)
-   pd.DataFrame(regionstest)
-   y = pd.DataFrame(regionstest)
-   #Get Shape and Size of Regions
-   [a1,b1] = y.shape
-
-   #Select Only Regions Greater than 500 Pixels and Get their Line Count
-   linecounttest = 0
-   #Array Variable to hold Number of Lines Detected
-   TotalRegions = 0
-   graytest3 = np.zeros((e,d))
-   gray1 = np.zeros((7000,1))
-   gray1b = np.zeros((7000,1))
-   gray2 = np.zeros((7000,2))
-   threshold = np.zeros((d,e))
-
-   one = 0
-   two = 0
-
-   for j in range(0,a1):
-      #print(y.values[j,0])
-      if(y.values[j,0] > 1000):
-         gray1[linecounttest,0] = y.values[j,0]
-         linecounttest = linecounttest + 1
-         gray1b[linecounttest] = j
-         #one = y.values[j,1]),1][j,0]
-         #two = y.values[int(gray1[0,0]),1][j,1]
-         #gray2[linecounttest,0] = one
-         #gray2[linecounttest,1] = two
-
-    
-   print("linecounttest for 2")
-   print(linecounttest)
-   #print("one")
-   #print(gray2[:,0])
-   #print("two:")
-   #print(gray2[:,1])
-
-
-
-   img8 = im.fromarray(np.uint8(graytest3 * 255), 'L')
-   ###img8.show()
-   for m in range(0,linecounttest):
-      [size1, size2] = y.values[int(gray1b[m]),1].shape
-      print("starting")
-      print(size1)
-      print(size2)
-      for p in range(0, size1-1):
-      #img8.putpixel((int(y.values[int(gray1b[j]),1][0,0]),int(y.values[int(gray1b[j]),1][0,1])), 200)
-         img8.putpixel((int(y.values[int(gray1b[m]),1][p,0]),int(y.values[int(gray1b[m]),1][p,1])), 255)
-
-         #print("starting 2")
-
-   #print(y.values[29,1][0,0])
-   print("Final Image for Inertinite White Image 2:")
-   ###img8.show()
-
-
-
-   #Transposing to right size. Transpose and then Rotate to see Final Image
-   ###img8.show()
-   img9 = img8.transpose(1)
-   ###img9.show()
-   img10 = img9.rotate(-90)
-   ###img10.show()
-   InertiniteWhite = img10
-
-
-   #Do the same thing for the other macerels:
-   #Inertinite - Blue
-   #Next: Inertinite - Blue 
-   #Color Thresholding for Inertiinite - Blue
-   #Target Color Range: [49 255 255]
-
-
-   print("Starting Inertinite Blue Processing")
-   #Color Thresholding for Inertinite - Blue
-   # Ideal Values: [49 255 255]
-   datap = cv2.imread(Imagefile[z])
-   [a1,b1,c1] = datab.shape
-   print(a1)
-   print(b1)
-   print(c1)
-   for i in range(0,a1):
-      for j in range(0,b1):
-         if((datap[i,j,0] > 44) & (datap[i,j,0] < 54)):
-            if((datap[i,j,1] > 250)): #64) & (datap[i,j,1] < 184)):
-               if( ((datap[i,j,2] > 250))):# & (datap[i,j,2] <255))):# | ((datab[i,j,2] > 40) & (datab[i,j,2] < 60)) ):
-                   #print("Got in")
-                   datad[i,j,0] = 255
-                   datad[i,j,1] = 0
-                   datad[i,j,2] = 0
-
-   data1 = dataf
-   for i in range(0,a1):
-      for j in range(0,b1):
-           if((datad[i,j,0] != 255) & (datad[i,j,1] != 0) & (datad[i,j,2] != 0) ):
-              data1[i,j,0] = 0
-              data1[i,j,1] = 0
-              data1[i,j,2] = 0
-
-
-   print("Final Inertinite Blue Image 1")           
-   img3 = im.fromarray(data1, 'RGB')
-   img3.show()
-
-   graytest = cv2.cvtColor(data1, cv2.COLOR_BGR2GRAY)
-   #Grayscale Thresholding to extract lines in Test Image
-   [d,e] = graytest.shape
-   graytest2 = cv2.cvtColor(data1, cv2.COLOR_BGR2GRAY)
-   #perform Region Props on Thresholded Test Image
-   lineimagecctest = np.array(graytest)
-   #Select Pixels Greater than 100 with a mask
-   masktest = lineimagecctest > 100
+   masktest = lineimagecctest > 1
    labelstest = measure.label(masktest)
 
    #Segment out Regions
@@ -842,7 +693,7 @@ for z in range(0,25):
 
    img8 = im.fromarray(np.uint8(graytest3 * 255), 'L')
    img8.show()
-   for m in range(0,linecounttest):
+   for m in range(0,linecounttest+1):
       [size1, size2] = y.values[int(gray1b[m]),1].shape
       print("starting")
       print(size1)
@@ -854,16 +705,24 @@ for z in range(0,25):
          #print("starting 2")
 
    #print(y.values[29,1][0,0])
-   print("Final Image for Inertinite Blue Image 2:")
-   #img8.show()
-   InertiniteBlue = img10
+   print("Final Image for Vitrinite Medium to Light Gray Processing 2:")
+   img8.show()
 
-   #            if( img10.getpixel((i,j)) > 180):
-   #               img15a.putpixel((i,j), 255)
-   #            else:
-   #                img15a.putpixel((i,j), 0) 
 
-   #Congregate ALL FIVE (5) IMAGES from Macerel Processing into ONE (1) SINGLE Image
+
+   #Transposing to right size. Transpose and then Rotate to see Final Image
+   img8.show()
+   img9 = img8.transpose(1)
+   img9.show()
+   img10 = img9.rotate(-90)
+   img10.show()
+   VitriniteMediumtoLightGray = img10
+
+
+
+ 
+
+   #Congregate ALL THREE (3) IMAGES from Macerel Processing into ONE (1) SINGLE Image
    print("Getting FINAL IMAGE from Marcerel Detection Algorithm")
    dataq = cv2.imread(Imagefile[z])
    [a1,b1,c1] = datab.shape
@@ -874,7 +733,7 @@ for z in range(0,25):
    print(c1)
    for i in range(0,a1):
       for j in range(0,b1):
-         if((LiptiniteBrown.getpixel((i,j)) != 0) | (LiptiniteDarkGray.getpixel((i,j)) != 0) | (VitriniteMediumtoLightGray.getpixel((i,j)) != 0) | (InertiniteWhite.getpixel((i,j)) != 0) | (InertiniteBlue.getpixel((i,j)) != 0)):
+         if((LiptiniteBrown.getpixel((i,j)) != 0) | (LiptiniteDarkGray.getpixel((i,j)) != 0) | (VitriniteMediumtoLightGray.getpixel((i,j)) != 0)):
             FinalImageMacerel2.putpixel((i,j), 255)
             FinalImageMacerel[i,j] = 2
          else:
